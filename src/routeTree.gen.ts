@@ -10,6 +10,7 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as SobreRouteImport } from './routes/sobre'
+import { Route as PublicacoesRouteImport } from './routes/publicacoes'
 import { Route as MeuPartoIaRouteImport } from './routes/meu-parto-ia'
 import { Route as LoginRouteImport } from './routes/login'
 import { Route as DashboardPublicoRouteImport } from './routes/dashboard-publico'
@@ -18,6 +19,11 @@ import { Route as IndexRouteImport } from './routes/index'
 const SobreRoute = SobreRouteImport.update({
   id: '/sobre',
   path: '/sobre',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PublicacoesRoute = PublicacoesRouteImport.update({
+  id: '/publicacoes',
+  path: '/publicacoes',
   getParentRoute: () => rootRouteImport,
 } as any)
 const MeuPartoIaRoute = MeuPartoIaRouteImport.update({
@@ -46,6 +52,7 @@ export interface FileRoutesByFullPath {
   '/dashboard-publico': typeof DashboardPublicoRoute
   '/login': typeof LoginRoute
   '/meu-parto-ia': typeof MeuPartoIaRoute
+  '/publicacoes': typeof PublicacoesRoute
   '/sobre': typeof SobreRoute
 }
 export interface FileRoutesByTo {
@@ -53,6 +60,7 @@ export interface FileRoutesByTo {
   '/dashboard-publico': typeof DashboardPublicoRoute
   '/login': typeof LoginRoute
   '/meu-parto-ia': typeof MeuPartoIaRoute
+  '/publicacoes': typeof PublicacoesRoute
   '/sobre': typeof SobreRoute
 }
 export interface FileRoutesById {
@@ -61,19 +69,33 @@ export interface FileRoutesById {
   '/dashboard-publico': typeof DashboardPublicoRoute
   '/login': typeof LoginRoute
   '/meu-parto-ia': typeof MeuPartoIaRoute
+  '/publicacoes': typeof PublicacoesRoute
   '/sobre': typeof SobreRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/dashboard-publico' | '/login' | '/meu-parto-ia' | '/sobre'
+  fullPaths:
+    | '/'
+    | '/dashboard-publico'
+    | '/login'
+    | '/meu-parto-ia'
+    | '/publicacoes'
+    | '/sobre'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/dashboard-publico' | '/login' | '/meu-parto-ia' | '/sobre'
+  to:
+    | '/'
+    | '/dashboard-publico'
+    | '/login'
+    | '/meu-parto-ia'
+    | '/publicacoes'
+    | '/sobre'
   id:
     | '__root__'
     | '/'
     | '/dashboard-publico'
     | '/login'
     | '/meu-parto-ia'
+    | '/publicacoes'
     | '/sobre'
   fileRoutesById: FileRoutesById
 }
@@ -82,6 +104,7 @@ export interface RootRouteChildren {
   DashboardPublicoRoute: typeof DashboardPublicoRoute
   LoginRoute: typeof LoginRoute
   MeuPartoIaRoute: typeof MeuPartoIaRoute
+  PublicacoesRoute: typeof PublicacoesRoute
   SobreRoute: typeof SobreRoute
 }
 
@@ -92,6 +115,13 @@ declare module '@tanstack/react-router' {
       path: '/sobre'
       fullPath: '/sobre'
       preLoaderRoute: typeof SobreRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/publicacoes': {
+      id: '/publicacoes'
+      path: '/publicacoes'
+      fullPath: '/publicacoes'
+      preLoaderRoute: typeof PublicacoesRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/meu-parto-ia': {
@@ -130,6 +160,7 @@ const rootRouteChildren: RootRouteChildren = {
   DashboardPublicoRoute: DashboardPublicoRoute,
   LoginRoute: LoginRoute,
   MeuPartoIaRoute: MeuPartoIaRoute,
+  PublicacoesRoute: PublicacoesRoute,
   SobreRoute: SobreRoute,
 }
 export const routeTree = rootRouteImport
