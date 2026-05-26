@@ -9,18 +9,13 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as SobreRouteImport } from './routes/sobre'
 import { Route as PublicacoesRouteImport } from './routes/publicacoes'
 import { Route as MeuPartoIaRouteImport } from './routes/meu-parto-ia'
 import { Route as LoginRouteImport } from './routes/login'
 import { Route as DashboardPublicoRouteImport } from './routes/dashboard-publico'
+import { Route as AplataformaRouteImport } from './routes/aplataforma'
 import { Route as IndexRouteImport } from './routes/index'
 
-const SobreRoute = SobreRouteImport.update({
-  id: '/sobre',
-  path: '/sobre',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const PublicacoesRoute = PublicacoesRouteImport.update({
   id: '/publicacoes',
   path: '/publicacoes',
@@ -41,6 +36,11 @@ const DashboardPublicoRoute = DashboardPublicoRouteImport.update({
   path: '/dashboard-publico',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AplataformaRoute = AplataformaRouteImport.update({
+  id: '/aplataforma',
+  path: '/aplataforma',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -49,74 +49,67 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/aplataforma': typeof AplataformaRoute
   '/dashboard-publico': typeof DashboardPublicoRoute
   '/login': typeof LoginRoute
   '/meu-parto-ia': typeof MeuPartoIaRoute
   '/publicacoes': typeof PublicacoesRoute
-  '/sobre': typeof SobreRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/aplataforma': typeof AplataformaRoute
   '/dashboard-publico': typeof DashboardPublicoRoute
   '/login': typeof LoginRoute
   '/meu-parto-ia': typeof MeuPartoIaRoute
   '/publicacoes': typeof PublicacoesRoute
-  '/sobre': typeof SobreRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/aplataforma': typeof AplataformaRoute
   '/dashboard-publico': typeof DashboardPublicoRoute
   '/login': typeof LoginRoute
   '/meu-parto-ia': typeof MeuPartoIaRoute
   '/publicacoes': typeof PublicacoesRoute
-  '/sobre': typeof SobreRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/aplataforma'
     | '/dashboard-publico'
     | '/login'
     | '/meu-parto-ia'
     | '/publicacoes'
-    | '/sobre'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/aplataforma'
     | '/dashboard-publico'
     | '/login'
     | '/meu-parto-ia'
     | '/publicacoes'
-    | '/sobre'
   id:
     | '__root__'
     | '/'
+    | '/aplataforma'
     | '/dashboard-publico'
     | '/login'
     | '/meu-parto-ia'
     | '/publicacoes'
-    | '/sobre'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AplataformaRoute: typeof AplataformaRoute
   DashboardPublicoRoute: typeof DashboardPublicoRoute
   LoginRoute: typeof LoginRoute
   MeuPartoIaRoute: typeof MeuPartoIaRoute
   PublicacoesRoute: typeof PublicacoesRoute
-  SobreRoute: typeof SobreRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/sobre': {
-      id: '/sobre'
-      path: '/sobre'
-      fullPath: '/sobre'
-      preLoaderRoute: typeof SobreRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/publicacoes': {
       id: '/publicacoes'
       path: '/publicacoes'
@@ -145,6 +138,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DashboardPublicoRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/aplataforma': {
+      id: '/aplataforma'
+      path: '/aplataforma'
+      fullPath: '/aplataforma'
+      preLoaderRoute: typeof AplataformaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -157,11 +157,11 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AplataformaRoute: AplataformaRoute,
   DashboardPublicoRoute: DashboardPublicoRoute,
   LoginRoute: LoginRoute,
   MeuPartoIaRoute: MeuPartoIaRoute,
   PublicacoesRoute: PublicacoesRoute,
-  SobreRoute: SobreRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
