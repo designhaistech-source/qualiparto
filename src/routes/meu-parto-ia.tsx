@@ -72,6 +72,7 @@ function MeuPartoIaPage() {
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
+      <Breadcrumbs items={[{ label: "Meu Parto IA" }]} />
 
       <section className="relative overflow-hidden bg-[image:var(--gradient-hero)]">
         <div className="mx-auto max-w-7xl px-6 py-20 md:py-28">
