@@ -3,6 +3,7 @@ import { Smile, Users, TrendingUp, BarChart3, ArrowRight, Lock, LineChart } from
 import { Button } from "@/components/ui/button";
 import { Logo } from "@/components/logo";
 import { SiteFooter } from "@/components/site-footer";
+import { Breadcrumbs } from "@/components/breadcrumbs";
 
 export const Route = createFileRoute("/dashboard-publico")({
   head: () => ({
@@ -82,6 +83,7 @@ function DashboardPublicoPage() {
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
+      <Breadcrumbs items={[{ label: "Dashboard Público" }]} />
 
       <section className="relative overflow-hidden bg-[image:var(--gradient-hero)]">
         <div className="mx-auto max-w-7xl px-6 py-20 md:py-24">
