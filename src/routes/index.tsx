@@ -30,7 +30,7 @@ export const Route = createFileRoute("/")({
 const navItems = [
   { label: "Início", href: "/" },
   { label: "Dashboard Público", href: "/dashboard-publico" },
-  { label: "Meu Parto IA", href: "#ferramentas" },
+  { label: "Meu Parto IA", href: "/meu-parto-ia" },
   { label: "A plataforma", href: "/sobre" },
   { label: "Publicações", href: "#publicacoes" },
 ];
