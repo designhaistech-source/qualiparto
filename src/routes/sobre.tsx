@@ -3,6 +3,7 @@ import { useEffect, useRef, useState } from "react";
 import { Heart, Lock, ArrowRight, Target, Users, Microscope, ShieldCheck, HandHeart, Building2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Logo } from "@/components/logo";
+import { SiteFooter } from "@/components/site-footer";
 import partnerQualisaudeUfrn from "@/assets/partner-qualisaude-ufrn.png";
 import partnerMetropole from "@/assets/partner-metropole.png";
 import partnerCnpq from "@/assets/partner-cnpq.png";
