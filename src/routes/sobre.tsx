@@ -398,27 +398,6 @@ function SobrePage() {
               </p>
             </Section>
 
-            <Section id="parceiros" eyebrow="Parceiros" title="Quem faz a QualiParto acontecer">
-              <p>
-                A plataforma é fruto de uma parceria entre instituições de ensino, pesquisa e
-                fomento comprometidas com a saúde materna no Brasil.
-              </p>
-              <div className="mt-6 flex flex-wrap items-center gap-x-10 gap-y-6">
-                {[
-                  { src: partnerQualisaudeUfrn, alt: "QualiSaúde e UFRN", className: "h-12 md:h-14" },
-                  { src: partnerMetropole, alt: "Metrópole Digital", className: "h-10 md:h-12" },
-                  { src: partnerCnpq, alt: "CNPq", className: "h-10 md:h-12" },
-                ].map((p) => (
-                  <img
-                    key={p.alt}
-                    src={p.src}
-                    alt={p.alt}
-                    className={`${p.className} w-auto object-contain opacity-80 transition hover:opacity-100`}
-                    loading="lazy"
-                  />
-                ))}
-              </div>
-            </Section>
           </div>
 
           <TableOfContents />
