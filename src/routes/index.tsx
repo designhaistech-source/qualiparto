@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { Heart, BarChart3, Sparkles, ArrowRight, Building2, Lock } from "lucide-react";
+import { BarChart3, Sparkles, ArrowRight, Building2, Lock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Logo } from "@/components/logo";
 import { SiteFooter } from "@/components/site-footer";
