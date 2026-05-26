@@ -46,7 +46,7 @@ const navItems = [
   { label: "Início", href: "#inicio" },
   { label: "Dashboard Público", href: "#ferramentas" },
   { label: "Meu Parto IA", href: "#ferramentas" },
-  { label: "Sobre", href: "/sobre" },
+  { label: "A plataforma", href: "/sobre" },
   { label: "Publicações", href: "#publicacoes" },
 ];
 
