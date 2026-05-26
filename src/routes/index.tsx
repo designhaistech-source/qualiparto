@@ -52,7 +52,6 @@ function Navbar() {
           ))}
         </nav>
         <Button
-        <Button
           asChild
           variant="outline"
           className="group rounded-full border-border/80 bg-transparent px-4 text-xs font-medium text-muted-foreground hover:border-primary/40 hover:bg-primary/5 hover:text-primary"
