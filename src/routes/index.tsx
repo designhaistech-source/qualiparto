@@ -90,7 +90,7 @@ function Hero() {
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <Button asChild size="lg" className="rounded-full bg-primary px-7 shadow-[var(--shadow-soft)] hover:bg-primary-glow">
-              <Link to="/dashboard-publico">Explorar Dashboard <ArrowRight className="ml-1 h-4 w-4" /></Link>
+              <Link to="/dashboard-publico">Explorar Dashboard</Link>
             </Button>
             <Button
               asChild
