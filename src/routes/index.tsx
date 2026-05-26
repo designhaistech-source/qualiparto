@@ -22,22 +22,16 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
+import qualipartoLogo from "@/assets/qualiparto-logo.png";
+
 function Logo({ light = false }: { light?: boolean }) {
   return (
-    <Link to="/" className="flex items-center gap-2.5">
-      <svg viewBox="0 0 64 64" className="h-10 w-10" aria-hidden="true">
-        <path
-          d="M32 58 C8 42 4 26 14 16 C22 8 30 14 32 20 C34 14 42 8 50 16 C60 26 56 42 32 58 Z"
-          fill={light ? "white" : "oklch(0.62 0.17 152)"}
-        />
-        <circle cx="26" cy="26" r="3.2" fill={light ? "oklch(0.62 0.17 152)" : "white"} />
-        <path d="M22 38 q4 -8 8 0 v6 h-8 z" fill={light ? "oklch(0.62 0.17 152)" : "white"} />
-        <circle cx="40" cy="30" r="2.2" fill={light ? "oklch(0.62 0.17 152)" : "white"} />
-        <path d="M37 38 q3 -5 6 0 v4 h-6 z" fill={light ? "oklch(0.62 0.17 152)" : "white"} />
-      </svg>
-      <span className={`text-xl font-bold tracking-tight ${light ? "text-white" : "text-foreground"}`}>
-        Quali<span className={light ? "text-secondary" : "text-primary"}>Parto</span>
-      </span>
+    <Link to="/" className="flex items-center" aria-label="QualiParto">
+      <img
+        src={qualipartoLogo}
+        alt="QualiParto"
+        className={`h-9 w-auto ${light ? "brightness-0 invert" : ""}`}
+      />
     </Link>
   );
 }
