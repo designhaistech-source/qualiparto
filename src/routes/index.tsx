@@ -70,9 +70,6 @@ function Hero() {
       <div className="absolute -bottom-32 -left-32 -z-10 h-96 w-96 rounded-full bg-primary/15 blur-3xl" />
       <div className="mx-auto grid max-w-7xl items-center gap-12 px-6 py-10 md:grid-cols-2 md:py-12">
         <div>
-          <span className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-3 py-1 text-xs font-medium text-primary">
-            <Sparkles className="h-3.5 w-3.5" /> Plataforma QualiParto
-          </span>
           <h1 className="mt-5 text-5xl font-bold leading-[1.05] tracking-tight text-foreground md:text-6xl">
             Plataforma <span className="text-primary">QualiParto</span>
           </h1>
