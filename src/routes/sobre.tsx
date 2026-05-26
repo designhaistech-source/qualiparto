@@ -215,15 +215,15 @@ function SobrePage() {
 
       <div className="relative overflow-hidden border-b border-border/60 bg-[var(--gradient-hero)]">
         <div className="absolute -right-32 -top-32 -z-10 h-96 w-96 rounded-full bg-secondary/30 blur-3xl" />
-        <div className="mx-auto max-w-7xl px-6 py-16 md:py-20">
+        <div className="mx-auto max-w-4xl px-6 py-16 text-center md:py-24">
           <span className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-3 py-1 text-xs font-medium text-primary">
             <Heart className="h-3.5 w-3.5" /> Sobre a QualiParto
           </span>
-          <h1 className="mt-5 max-w-3xl text-4xl font-bold leading-[1.1] tracking-tight text-foreground md:text-5xl">
+          <h1 className="mt-5 text-balance text-4xl font-bold leading-[1.1] tracking-tight text-foreground md:text-5xl">
             Dados, ciência e cuidado humanizado a serviço da{" "}
             <span className="text-primary">assistência ao parto no Brasil</span>
           </h1>
-          <p className="mt-5 max-w-2xl text-lg text-muted-foreground">
+          <p className="mx-auto mt-5 max-w-2xl text-balance text-lg text-muted-foreground">
             Conheça a missão, a metodologia e as pessoas por trás da plataforma nacional de
             monitoramento da qualidade obstétrica.
           </p>
