@@ -23,7 +23,6 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
-import qualipartoLogo from "@/assets/qualiparto-logo.png";
 
 function Logo({ light = false }: { light?: boolean }) {
   return (
