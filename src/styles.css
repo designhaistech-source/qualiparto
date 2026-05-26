@@ -184,3 +184,15 @@
   }
 }
 
+/* Hide "Edit with Lovable" floating badge/button */
+iframe[src*="lovable"],
+[class*="lovable-badge"],
+[id*="lovable-badge"],
+[data-lovable-badge],
+[data-lovable] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
