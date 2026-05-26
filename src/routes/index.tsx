@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { Heart, BarChart3, Sparkles, ArrowRight, Building2, Lock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-nurses.jpg";
+import qualipartoLogo from "@/assets/qualiparto-logo.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
