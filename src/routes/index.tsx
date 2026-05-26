@@ -65,7 +65,7 @@ function Navbar() {
 function Hero() {
   return (
     <section id="inicio" className="relative overflow-hidden">
-      <div className="absolute inset-0 -z-10 bg-[var(--gradient-hero)]" />
+      <div className="absolute inset-0 -z-10 bg-[image:var(--gradient-hero)]" />
       <div className="absolute -right-32 -top-32 -z-10 h-96 w-96 rounded-full bg-secondary/30 blur-3xl" />
       <div className="absolute -bottom-32 -left-32 -z-10 h-96 w-96 rounded-full bg-primary/15 blur-3xl" />
       <div className="mx-auto grid max-w-7xl items-center gap-12 px-6 py-20 md:grid-cols-2 md:py-28">

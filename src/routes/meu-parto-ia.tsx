@@ -73,7 +73,7 @@ function MeuPartoIaPage() {
     <div className="min-h-screen bg-background">
       <Navbar />
 
-      <section className="relative overflow-hidden bg-[var(--gradient-hero)]">
+      <section className="relative overflow-hidden bg-[image:var(--gradient-hero)]">
         <div className="mx-auto max-w-7xl px-6 py-20 md:py-28">
           <span className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-3 py-1 text-xs font-medium text-primary">
             <Sparkles className="h-3.5 w-3.5" /> Inteligência Artificial
