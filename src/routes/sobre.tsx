@@ -340,19 +340,7 @@ function SobrePage() {
         </div>
       </main>
 
-      <footer className="border-t border-border/60 bg-background">
-        <div className="mx-auto max-w-7xl px-6 py-8">
-          <div className="flex flex-col items-center justify-between gap-3 text-xs text-muted-foreground md:flex-row">
-            <p>© 2026 QualiParto</p>
-            <nav className="flex flex-wrap gap-5">
-              <Link to="/sobre" className="hover:text-primary">A plataforma</Link>
-              <a href="/" className="hover:text-primary">Início</a>
-              <a href="#" className="hover:text-primary">Privacidade</a>
-              <a href="#" className="hover:text-primary">Contato</a>
-            </nav>
-          </div>
-        </div>
-      </footer>
+      <SiteFooter />
     </div>
   );
 }

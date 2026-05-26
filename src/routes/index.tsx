@@ -2,10 +2,8 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { Heart, BarChart3, Sparkles, ArrowRight, Building2, Lock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Logo } from "@/components/logo";
+import { SiteFooter } from "@/components/site-footer";
 import heroImage from "@/assets/hero-nurses.jpg";
-import partnerQualisaudeUfrn from "@/assets/partner-qualisaude-ufrn.png";
-import partnerMetropole from "@/assets/partner-metropole.png";
-import partnerCnpq from "@/assets/partner-cnpq.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -305,37 +303,6 @@ function Publications() {
   );
 }
 
-const partners = [
-  { name: "QualiSaúde / UFRN", src: partnerQualisaudeUfrn },
-  { name: "Metrópole Digital", src: partnerMetropole },
-  { name: "CNPq", src: partnerCnpq },
-];
-
-function Footer() {
-  return (
-    <footer className="border-t border-border/60 bg-background">
-      <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 px-6 py-6 text-xs text-muted-foreground md:flex-row">
-        <p className="shrink-0">© 2026 QualiParto</p>
-        <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-3 opacity-80">
-          {partners.map((p) => (
-            <img
-              key={p.name}
-              src={p.src}
-              alt={p.name}
-              className="h-7 w-auto object-contain md:h-8"
-            />
-          ))}
-        </div>
-        <nav className="flex shrink-0 flex-wrap justify-center gap-5">
-          <Link to="/sobre" className="hover:text-primary">A plataforma</Link>
-          <a href="#publicacoes" className="hover:text-primary">Publicações</a>
-          <a href="#" className="hover:text-primary">Privacidade</a>
-          <a href="#" className="hover:text-primary">Contato</a>
-        </nav>
-      </div>
-    </footer>
-  );
-}
 
 function Index() {
   return (
@@ -347,7 +314,7 @@ function Index() {
         <About />
         <Publications />
       </main>
-      <Footer />
+      <SiteFooter />
     </div>
   );
 }

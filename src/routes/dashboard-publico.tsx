@@ -2,9 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { Smile, Users, TrendingUp, BarChart3, ArrowRight, Lock, LineChart } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Logo } from "@/components/logo";
-import partnerQualisaudeUfrn from "@/assets/partner-qualisaude-ufrn.png";
-import partnerMetropole from "@/assets/partner-metropole.png";
-import partnerCnpq from "@/assets/partner-cnpq.png";
+import { SiteFooter } from "@/components/site-footer";
 
 export const Route = createFileRoute("/dashboard-publico")({
   head: () => ({
@@ -162,42 +160,7 @@ function DashboardPublicoPage() {
         </div>
       </section>
 
-      <footer className="border-t border-border/60 bg-background">
-        <div className="mx-auto max-w-7xl px-6 py-12">
-          <p className="text-center text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground">
-            Instituições Parceiras
-          </p>
-          <div className="mt-6 flex flex-wrap items-center justify-center gap-x-12 gap-y-6 opacity-80">
-            {[
-              { src: partnerQualisaudeUfrn, alt: "QualiSaúde e UFRN", className: "h-8 md:h-9" },
-              { src: partnerMetropole, alt: "Metrópole Digital", className: "h-8 md:h-9" },
-              { src: partnerCnpq, alt: "CNPq", className: "h-8 md:h-9" },
-            ].map((p) => (
-              <img
-                key={p.alt}
-                src={p.src}
-                alt={p.alt}
-                className={`${p.className} w-auto object-contain`}
-                loading="lazy"
-              />
-            ))}
-          </div>
-          <div className="mt-10 flex flex-col items-center justify-between gap-3 border-t border-border/60 pt-6 text-xs text-muted-foreground md:flex-row">
-            <div className="flex items-center gap-3">
-              <Logo />
-            </div>
-            <nav className="flex flex-wrap gap-5">
-              <Link to="/sobre" className="hover:text-primary">Sobre</Link>
-              <a href="/#publicacoes" className="hover:text-primary">Publicações</a>
-              <a href="#" className="hover:text-primary">Política de Privacidade</a>
-              <a href="#" className="hover:text-primary">Contato</a>
-            </nav>
-          </div>
-          <p className="mt-4 text-xs text-muted-foreground">
-            © 2026 QualiParto. Parceria UFRN, IMD, CNPq e QualiSaúde.
-          </p>
-        </div>
-      </footer>
+      <SiteFooter />
     </div>
   );
 }
