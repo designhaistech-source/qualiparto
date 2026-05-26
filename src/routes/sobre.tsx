@@ -23,11 +23,12 @@ export const Route = createFileRoute("/sobre")({
 });
 
 const sections = [
-  { id: "missao", label: "Missão", icon: Target },
-  { id: "como-funciona", label: "Como funciona", icon: Microscope },
-  { id: "publicos", label: "Para quem é", icon: Users },
-  { id: "metodologia", label: "Metodologia", icon: ShieldCheck },
-  { id: "humanizacao", label: "Humanização", icon: HandHeart },
+  { id: "quem-somos", label: "Quem somos", icon: Users },
+  { id: "ferramentas", label: "Nossas ferramentas", icon: Wrench },
+  { id: "acesso-gestor", label: "Acesso Gestor", icon: Lock },
+  { id: "como-avaliar", label: "Como avaliar", icon: FileText },
+  { id: "indicadores", label: "Indicadores", icon: BarChart3 },
+  { id: "instrumento", label: "Instrumento de coleta", icon: ClipboardList },
   { id: "parceiros", label: "Parceiros", icon: Building2 },
 ];
 
