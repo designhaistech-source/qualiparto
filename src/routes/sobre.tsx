@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useEffect, useRef, useState } from "react";
 import { Heart, Lock, ArrowRight, Target, Users, Microscope, ShieldCheck, HandHeart, Building2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import qualipartoLogo from "@/assets/qualiparto-logo.png";
 
 export const Route = createFileRoute("/sobre")({
   head: () => ({
@@ -28,20 +29,8 @@ const sections = [
 
 function Logo() {
   return (
-    <Link to="/" className="flex items-center gap-2.5">
-      <svg viewBox="0 0 64 64" className="h-9 w-9" aria-hidden="true">
-        <path
-          d="M32 58 C8 42 4 26 14 16 C22 8 30 14 32 20 C34 14 42 8 50 16 C60 26 56 42 32 58 Z"
-          fill="oklch(0.62 0.17 152)"
-        />
-        <circle cx="26" cy="26" r="3.2" fill="white" />
-        <path d="M22 38 q4 -8 8 0 v6 h-8 z" fill="white" />
-        <circle cx="40" cy="30" r="2.2" fill="white" />
-        <path d="M37 38 q3 -5 6 0 v4 h-6 z" fill="white" />
-      </svg>
-      <span className="text-xl font-bold tracking-tight text-foreground">
-        Quali<span className="text-primary">Parto</span>
-      </span>
+    <Link to="/" className="flex items-center" aria-label="QualiParto">
+      <img src={qualipartoLogo} alt="QualiParto" className="h-9 w-auto" />
     </Link>
   );
 }
