@@ -52,11 +52,13 @@ function Navbar() {
           ))}
         </nav>
         <Button
+        <Button
+          asChild
           variant="outline"
           className="group rounded-full border-border/80 bg-transparent px-4 text-xs font-medium text-muted-foreground hover:border-primary/40 hover:bg-primary/5 hover:text-primary"
           title="Área restrita destinada apenas a hospitais e instituições parceiras"
         >
-          <Lock className="h-3.5 w-3.5" /> Área Hospitalar
+          <Link to="/login"><Lock className="h-3.5 w-3.5" /> Área Hospitalar</Link>
         </Button>
       </div>
     </header>
