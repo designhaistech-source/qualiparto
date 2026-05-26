@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useEffect, useRef, useState } from "react";
 import { Heart, Lock, ArrowRight, Target, Users, Microscope, ShieldCheck, HandHeart, Building2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import qualipartoLogo from "@/assets/qualiparto-logo.png";
 
 export const Route = createFileRoute("/sobre")({
   head: () => ({
