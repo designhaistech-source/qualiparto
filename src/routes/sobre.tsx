@@ -1,12 +1,9 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useEffect, useRef, useState } from "react";
-import { Heart, Lock, ArrowRight, Users, Wrench, Building2, FileText, BarChart3, ClipboardList, Sparkles, MessageSquare, Download } from "lucide-react";
+import { Heart, Lock, ArrowRight, Users, Wrench, FileText, BarChart3, ClipboardList, Sparkles, MessageSquare, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Logo } from "@/components/logo";
 import { SiteFooter } from "@/components/site-footer";
-import partnerQualisaudeUfrn from "@/assets/partner-qualisaude-ufrn.png";
-import partnerMetropole from "@/assets/partner-metropole.png";
-import partnerCnpq from "@/assets/partner-cnpq.png";
 
 export const Route = createFileRoute("/sobre")({
   head: () => ({
@@ -29,7 +26,7 @@ const sections = [
   { id: "como-avaliar", label: "Como avaliar", icon: FileText },
   { id: "indicadores", label: "Indicadores", icon: BarChart3 },
   { id: "instrumento", label: "Instrumento de coleta", icon: ClipboardList },
-  { id: "parceiros", label: "Parceiros", icon: Building2 },
+  
 ];
 
 function Navbar() {
@@ -398,27 +395,6 @@ function SobrePage() {
               </p>
             </Section>
 
-            <Section id="parceiros" eyebrow="Parceiros" title="Quem faz a QualiParto acontecer">
-              <p>
-                A plataforma é fruto de uma parceria entre instituições de ensino, pesquisa e
-                fomento comprometidas com a saúde materna no Brasil.
-              </p>
-              <div className="mt-6 flex flex-wrap items-center gap-x-10 gap-y-6">
-                {[
-                  { src: partnerQualisaudeUfrn, alt: "QualiSaúde e UFRN", className: "h-12 md:h-14" },
-                  { src: partnerMetropole, alt: "Metrópole Digital", className: "h-10 md:h-12" },
-                  { src: partnerCnpq, alt: "CNPq", className: "h-10 md:h-12" },
-                ].map((p) => (
-                  <img
-                    key={p.alt}
-                    src={p.src}
-                    alt={p.alt}
-                    className={`${p.className} w-auto object-contain opacity-80 transition hover:opacity-100`}
-                    loading="lazy"
-                  />
-                ))}
-              </div>
-            </Section>
           </div>
 
           <TableOfContents />

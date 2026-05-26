@@ -143,8 +143,6 @@ function LoginPage() {
               <Link to="/sobre" className="hover:text-primary">A plataforma</Link>
               <span className="text-border">|</span>
               <a href="#" className="hover:text-primary">Política de Privacidade</a>
-              <span className="text-border">|</span>
-              <a href="/#parceiros" className="hover:text-primary">Parceiros</a>
             </div>
           </div>
         </div>
