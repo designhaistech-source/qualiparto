@@ -83,7 +83,7 @@ function DashboardPublicoPage() {
     <div className="min-h-screen bg-background">
       <Navbar />
 
-      <section className="relative overflow-hidden bg-[var(--gradient-hero)]">
+      <section className="relative overflow-hidden bg-[image:var(--gradient-hero)]">
         <div className="mx-auto max-w-7xl px-6 py-20 md:py-24">
           <span className="text-xs font-semibold uppercase tracking-[0.18em] text-primary">
             Dashboard Público
@@ -140,7 +140,7 @@ function DashboardPublicoPage() {
       </section>
 
       <section className="mx-auto max-w-7xl px-6 py-16">
-        <div className="relative overflow-hidden rounded-3xl bg-[var(--gradient-primary)] p-10 md:p-14">
+        <div className="relative overflow-hidden rounded-3xl bg-[image:var(--gradient-primary)] p-10 md:p-14">
           <div className="absolute -right-20 -top-20 h-64 w-64 rounded-full bg-white/10 blur-3xl" />
           <h3 className="max-w-2xl text-2xl font-bold text-primary-foreground md:text-3xl">
             Quer acessar dados detalhados do seu hospital?
