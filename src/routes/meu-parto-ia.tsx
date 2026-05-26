@@ -33,7 +33,7 @@ function Navbar() {
           <Link to="/dashboard-publico" className="text-sm text-muted-foreground transition-colors hover:text-primary">Dashboard Público</Link>
           <Link to="/meu-parto-ia" className="text-sm font-medium text-primary">Meu Parto IA</Link>
           <Link to="/sobre" className="text-sm text-muted-foreground transition-colors hover:text-primary">A plataforma</Link>
-          <a href="/#publicacoes" className="text-sm text-muted-foreground transition-colors hover:text-primary">Publicações</a>
+          <a href="/publicacoes" className="text-sm text-muted-foreground transition-colors hover:text-primary">Publicações</a>
         </nav>
         <Button
           asChild

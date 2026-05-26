@@ -30,7 +30,7 @@ const navItems = [
   { label: "Dashboard Público", href: "/dashboard-publico" },
   { label: "Meu Parto IA", href: "/meu-parto-ia" },
   { label: "A plataforma", href: "/sobre" },
-  { label: "Publicações", href: "#publicacoes" },
+  { label: "Publicações", href: "/publicacoes" },
 ];
 
 function Navbar() {
