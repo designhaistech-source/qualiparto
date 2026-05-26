@@ -25,7 +25,7 @@ export function SiteFooter() {
           ))}
         </div>
         <nav className="flex shrink-0 flex-wrap justify-center gap-5">
-          <Link to="/sobre" className="hover:text-primary">A plataforma</Link>
+          <Link to="/aplataforma" className="hover:text-primary">A plataforma</Link>
           <a href="/publicacoes" className="hover:text-primary">Publicações</a>
           <a href="#" className="hover:text-primary">Privacidade</a>
           <a href="#" className="hover:text-primary">Contato</a>

@@ -156,7 +156,7 @@ function Navbar() {
           <Link to="/" className="text-sm text-muted-foreground transition-colors hover:text-primary">Início</Link>
           <Link to="/dashboard-publico" className="text-sm text-muted-foreground transition-colors hover:text-primary">Dashboard Público</Link>
           <Link to="/meu-parto-ia" className="text-sm text-muted-foreground transition-colors hover:text-primary">Meu Parto IA</Link>
-          <Link to="/sobre" className="text-sm text-muted-foreground transition-colors hover:text-primary">A plataforma</Link>
+          <Link to="/aplataforma" className="text-sm text-muted-foreground transition-colors hover:text-primary">A plataforma</Link>
           <Link to="/publicacoes" className="text-sm font-medium text-primary">Publicações</Link>
         </nav>
         <Button
@@ -299,7 +299,7 @@ function PublicacoesPage() {
               </a>
             </Button>
             <Button asChild variant="secondary" className="rounded-full">
-              <Link to="/sobre">Conhecer a Plataforma</Link>
+              <Link to="/aplataforma">Conhecer a Plataforma</Link>
             </Button>
           </div>
         </section>

@@ -140,7 +140,7 @@ function LoginPage() {
             </div>
 
             <div className="mt-6 flex items-center justify-center gap-3 text-xs text-muted-foreground">
-              <Link to="/sobre" className="hover:text-primary">A plataforma</Link>
+              <Link to="/aplataforma" className="hover:text-primary">A plataforma</Link>
               <span className="text-border">|</span>
               <a href="#" className="hover:text-primary">Política de Privacidade</a>
             </div>

@@ -6,7 +6,7 @@ import { Logo } from "@/components/logo";
 import { SiteFooter } from "@/components/site-footer";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 
-export const Route = createFileRoute("/sobre")({
+export const Route = createFileRoute("/aplataforma")({
   head: () => ({
     meta: [
       { title: "A Plataforma — QualiParto" },
