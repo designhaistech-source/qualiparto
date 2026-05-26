@@ -29,7 +29,7 @@ const sections = [
   { id: "como-avaliar", label: "Como avaliar", icon: FileText },
   { id: "indicadores", label: "Indicadores", icon: BarChart3 },
   { id: "instrumento", label: "Instrumento de coleta", icon: ClipboardList },
-  { id: "parceiros", label: "Parceiros", icon: Building2 },
+  
 ];
 
 function Navbar() {
