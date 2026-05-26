@@ -339,6 +339,35 @@ function SobrePage() {
           <TableOfContents />
         </div>
       </main>
+
+      <footer className="border-t border-border/60 bg-background">
+        <div className="mx-auto max-w-7xl px-6 py-10">
+          <div className="flex flex-wrap items-center justify-center gap-x-12 gap-y-6 opacity-80">
+            {[
+              { src: partnerQualisaudeUfrn, alt: "QualiSaúde e UFRN", className: "h-8 md:h-9" },
+              { src: partnerMetropole, alt: "Metrópole Digital", className: "h-8 md:h-9" },
+              { src: partnerCnpq, alt: "CNPq", className: "h-8 md:h-9" },
+            ].map((p) => (
+              <img
+                key={p.alt}
+                src={p.src}
+                alt={p.alt}
+                className={`${p.className} w-auto object-contain`}
+                loading="lazy"
+              />
+            ))}
+          </div>
+          <div className="mt-8 flex flex-col items-center justify-between gap-3 border-t border-border/60 pt-6 text-xs text-muted-foreground md:flex-row">
+            <p>© 2026 QualiParto</p>
+            <nav className="flex flex-wrap gap-5">
+              <Link to="/sobre" className="hover:text-primary">A plataforma</Link>
+              <a href="/" className="hover:text-primary">Início</a>
+              <a href="#" className="hover:text-primary">Privacidade</a>
+              <a href="#" className="hover:text-primary">Contato</a>
+            </nav>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }
