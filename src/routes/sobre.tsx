@@ -34,8 +34,9 @@ function Navbar() {
         <Logo />
         <nav className="hidden items-center gap-8 md:flex">
           <Link to="/" className="text-sm text-muted-foreground transition-colors hover:text-primary">Início</Link>
+          <a href="/#ferramentas" className="text-sm text-muted-foreground transition-colors hover:text-primary">Dashboard Público</a>
+          <a href="/#ferramentas" className="text-sm text-muted-foreground transition-colors hover:text-primary">Meu Parto IA</a>
           <Link to="/sobre" className="text-sm font-medium text-primary">A plataforma</Link>
-          <a href="/#ferramentas" className="text-sm text-muted-foreground transition-colors hover:text-primary">Ferramentas</a>
           <a href="/#publicacoes" className="text-sm text-muted-foreground transition-colors hover:text-primary">Publicações</a>
         </nav>
         <Button
