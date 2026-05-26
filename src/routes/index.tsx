@@ -225,7 +225,7 @@ function About() {
         <div className="relative rounded-3xl bg-gradient-to-br from-primary to-primary-glow p-10 shadow-[var(--shadow-soft)]">
           <div className="absolute -right-10 -top-10 h-64 w-64 rounded-full bg-secondary/20 blur-3xl" />
           <Building2 className="h-12 w-12 text-primary-foreground/80" strokeWidth={1.5} />
-          <h3 className="mt-6 text-2xl font-bold text-primary-foreground">Área do Gestor</h3>
+          <h3 className="mt-6 text-2xl font-bold text-primary-foreground">Área Hospitalar</h3>
           <p className="mt-3 text-primary-foreground/85">
             Acesso exclusivo para representantes hospitalares autorizarem a coleta automatizada
             de dados e acompanharem os indicadores internos do seu hospital.
