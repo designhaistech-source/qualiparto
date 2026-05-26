@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useEffect, useRef, useState } from "react";
 import { Heart, Lock, ArrowRight, Target, Users, Microscope, ShieldCheck, HandHeart, Building2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import qualipartoLogo from "@/assets/qualiparto-logo.png";
+import { Logo } from "@/components/logo";
 
 export const Route = createFileRoute("/sobre")({
   head: () => ({
@@ -26,14 +26,6 @@ const sections = [
   { id: "humanizacao", label: "Humanização", icon: HandHeart },
   { id: "parceiros", label: "Parceiros", icon: Building2 },
 ];
-
-function Logo() {
-  return (
-    <Link to="/" className="flex items-center" aria-label="QualiParto">
-      <img src={qualipartoLogo} alt="QualiParto" className="h-9 w-auto" />
-    </Link>
-  );
-}
 
 function Navbar() {
   return (

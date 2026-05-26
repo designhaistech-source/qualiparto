@@ -1,8 +1,8 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute } from "@tanstack/react-router";
 import { Heart, BarChart3, Sparkles, ArrowRight, Building2, Lock } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Logo } from "@/components/logo";
 import heroImage from "@/assets/hero-nurses.jpg";
-import qualipartoLogo from "@/assets/qualiparto-logo.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -23,18 +23,6 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
-
-function Logo({ light = false }: { light?: boolean }) {
-  return (
-    <Link to="/" className="flex items-center" aria-label="QualiParto">
-      <img
-        src={qualipartoLogo}
-        alt="QualiParto"
-        className={`h-9 w-auto ${light ? "brightness-0 invert" : ""}`}
-      />
-    </Link>
-  );
-}
 
 const navItems = [
   { label: "Início", href: "#inicio" },
