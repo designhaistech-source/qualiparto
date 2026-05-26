@@ -47,12 +47,6 @@ function LoginPage() {
                 alt="QualiParto"
                 className="h-16 w-auto brightness-0 invert"
               />
-              <p className="mt-2 text-sm uppercase tracking-[0.3em] text-primary-foreground/80">
-                Plataforma
-              </p>
-              <h1 className="mt-1 text-3xl font-bold tracking-tight md:text-4xl">
-                QualiParto
-              </h1>
             </div>
 
             <div className="space-y-4">
