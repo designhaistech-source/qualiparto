@@ -3,6 +3,9 @@ import { useEffect, useRef, useState } from "react";
 import { Heart, Lock, ArrowRight, Target, Users, Microscope, ShieldCheck, HandHeart, Building2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Logo } from "@/components/logo";
+import partnerQualisaudeUfrn from "@/assets/partner-qualisaude-ufrn.png";
+import partnerMetropole from "@/assets/partner-metropole.png";
+import partnerCnpq from "@/assets/partner-cnpq.png";
 
 export const Route = createFileRoute("/sobre")({
   head: () => ({
@@ -314,17 +317,19 @@ function SobrePage() {
                 A plataforma é fruto de uma parceria entre instituições de ensino, pesquisa e
                 fomento comprometidas com a saúde materna no Brasil.
               </p>
-              <div className="mt-4 flex flex-wrap gap-3">
-                {["UFRN", "IMD", "CNPq", "QualiSaúde"].map((p) => (
-                  <span
-                    key={p}
-                    className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-2 text-sm font-medium text-foreground"
-                  >
-                    <span className="grid h-7 w-7 place-items-center rounded-full bg-primary/10 text-xs font-bold text-primary">
-                      {p[0]}
-                    </span>
-                    {p}
-                  </span>
+              <div className="mt-6 flex flex-wrap items-center gap-x-10 gap-y-6">
+                {[
+                  { src: partnerQualisaudeUfrn, alt: "QualiSaúde e UFRN", className: "h-12 md:h-14" },
+                  { src: partnerMetropole, alt: "Metrópole Digital", className: "h-10 md:h-12" },
+                  { src: partnerCnpq, alt: "CNPq", className: "h-10 md:h-12" },
+                ].map((p) => (
+                  <img
+                    key={p.alt}
+                    src={p.src}
+                    alt={p.alt}
+                    className={`${p.className} w-auto object-contain opacity-80 transition hover:opacity-100`}
+                    loading="lazy"
+                  />
                 ))}
               </div>
             </Section>
