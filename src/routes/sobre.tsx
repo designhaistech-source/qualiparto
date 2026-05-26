@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useEffect, useRef, useState } from "react";
-import { Heart, Lock, ArrowRight, Target, Users, Microscope, ShieldCheck, HandHeart, Building2 } from "lucide-react";
+import { Heart, Lock, ArrowRight, Users, Wrench, Building2, FileText, BarChart3, ClipboardList, Sparkles, MessageSquare, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Logo } from "@/components/logo";
 import { SiteFooter } from "@/components/site-footer";
@@ -23,11 +23,12 @@ export const Route = createFileRoute("/sobre")({
 });
 
 const sections = [
-  { id: "missao", label: "Missão", icon: Target },
-  { id: "como-funciona", label: "Como funciona", icon: Microscope },
-  { id: "publicos", label: "Para quem é", icon: Users },
-  { id: "metodologia", label: "Metodologia", icon: ShieldCheck },
-  { id: "humanizacao", label: "Humanização", icon: HandHeart },
+  { id: "quem-somos", label: "Quem somos", icon: Users },
+  { id: "ferramentas", label: "Nossas ferramentas", icon: Wrench },
+  { id: "acesso-gestor", label: "Acesso Gestor", icon: Lock },
+  { id: "como-avaliar", label: "Como avaliar", icon: FileText },
+  { id: "indicadores", label: "Indicadores", icon: BarChart3 },
+  { id: "instrumento", label: "Instrumento de coleta", icon: ClipboardList },
   { id: "parceiros", label: "Parceiros", icon: Building2 },
 ];
 
@@ -240,77 +241,160 @@ function SobrePage() {
         <MobileScrollspy />
         <div className="grid gap-12 lg:grid-cols-[1fr_240px]">
           <div className="min-w-0">
-            <Section id="missao" eyebrow="Missão" title="Por que a QualiParto existe">
+            <Section id="quem-somos" eyebrow="Sobre" title="Quem somos nós?">
               <p>
-                A QualiParto nasce do compromisso de tornar a qualidade da assistência ao parto
-                mensurável, transparente e comparável entre hospitais brasileiros. Atuamos para
-                que cada nascimento seja seguro, baseado em evidências e respeitoso com a pessoa
-                que pare.
+                Somos uma iniciativa dedicada à melhoria da qualidade da atenção ao parto, com
+                foco na segurança, na experiência da mulher e na tomada de decisão baseada em
+                dados.
               </p>
               <p>
-                Acreditamos que dados confiáveis, somados à escuta de quem vivencia o parto, são
-                a base para melhorar continuamente os serviços de saúde.
+                Atuamos no desenvolvimento, implementação e avaliação de soluções que promovem
+                um cuidado mais humanizado, eficiente e orientado por evidências. Nosso trabalho
+                integra tecnologia, ciência de dados e práticas assistenciais para apoiar
+                profissionais de saúde e gestores na melhoria contínua dos serviços.
+              </p>
+              <p>
+                Acreditamos que a transformação do cuidado começa pela mensuração adequada,
+                transparência dos resultados e engajamento das equipes e usuários. Por isso,
+                construímos ferramentas que tornam visível aquilo que importa: a qualidade do
+                cuidado e a experiência das mulheres.
               </p>
             </Section>
 
-            <Section id="como-funciona" eyebrow="Como funciona" title="A plataforma em três camadas">
-              <p>
-                A QualiParto integra <strong>dados hospitalares</strong> com a{" "}
-                <strong>percepção de puérperas</strong> e disponibiliza esses indicadores em um{" "}
-                <strong>Dashboard Público</strong>, acessível a qualquer cidadão.
-              </p>
-              <ul className="mt-2 space-y-2 pl-5 [list-style:disc]">
-                <li>Coleta automatizada de dados clínicos nos hospitais participantes</li>
-                <li>Pesquisa de experiência respondida por quem vivenciou o parto</li>
-                <li>Cálculo de indicadores nacionais de qualidade obstétrica</li>
-              </ul>
-            </Section>
-
-            <Section id="publicos" eyebrow="Para quem é" title="Três públicos, uma plataforma">
-              <div className="grid gap-4 md:grid-cols-3">
-                <div className="rounded-xl border border-border/60 bg-card p-5">
-                  <p className="text-sm font-semibold text-foreground">Público geral</p>
-                  <p className="mt-1 text-sm text-muted-foreground">
-                    Acessa o Dashboard Público com indicadores abertos.
-                  </p>
-                </div>
-                <div className="rounded-xl border border-border/60 bg-card p-5">
-                  <p className="text-sm font-semibold text-foreground">Gestantes</p>
-                  <p className="mt-1 text-sm text-muted-foreground">
-                    Usam o Meu Parto IA sem login para construir seu plano de parto.
-                  </p>
-                </div>
-                <div className="rounded-xl border border-dashed border-border bg-muted/40 p-5">
-                  <p className="text-sm font-semibold text-foreground">Hospitais</p>
-                  <p className="mt-1 text-sm text-muted-foreground">
-                    Área restrita para instituições parceiras acompanharem indicadores internos.
-                  </p>
-                </div>
+            <Section id="ferramentas" eyebrow="O que oferecemos" title="Nossas ferramentas">
+              <div className="grid gap-4 md:grid-cols-2">
+                {[
+                  {
+                    icon: Lock,
+                    title: "Acesso Gestor",
+                    desc: "Painel exclusivo para gestores com informações sobre a qualidade do cuidado, permitindo acompanhar resultados e identificar oportunidades de melhoria de forma contínua.",
+                  },
+                  {
+                    icon: BarChart3,
+                    title: "Dashboard público",
+                    desc: "Painel aberto que amplia a transparência e o acesso às informações coletadas pela plataforma. Qualquer pessoa interessada pode explorar os indicadores de qualidade do cuidado ao parto.",
+                  },
+                  {
+                    icon: MessageSquare,
+                    title: "Avaliação do parto",
+                    desc: "Módulo de avaliação da experiência do parto. Por meio de um questionário simples, puérperas atendidas em instituições parceiras compartilham percepções e contribuem para a melhoria dos serviços.",
+                  },
+                  {
+                    icon: Sparkles,
+                    title: "Geração de planos de parto com IA",
+                    desc: "Ferramenta gratuita que ajuda gestantes a criarem seu plano de parto com apoio de inteligência artificial, facilitando a compreensão das opções e apoiando decisões mais informadas.",
+                  },
+                ].map(({ icon: Icon, title, desc }) => (
+                  <div key={title} className="rounded-xl border border-border/60 bg-card p-5">
+                    <div className="flex items-center gap-2 text-primary">
+                      <Icon className="h-4 w-4" />
+                      <p className="text-sm font-semibold text-foreground">{title}</p>
+                    </div>
+                    <p className="mt-2 text-sm text-muted-foreground">{desc}</p>
+                  </div>
+                ))}
               </div>
+              <p>
+                Juntas, essas ferramentas ajudam a transformar informações em melhorias reais e
+                aproximam as pessoas do cuidado, tornando o parto mais seguro, transparente e
+                centrado na mulher.
+              </p>
             </Section>
 
-            <Section id="metodologia" eyebrow="Metodologia" title="Indicadores baseados em evidência">
+            <Section id="acesso-gestor" eyebrow="Para hospitais" title="Acesso Gestor">
               <p>
-                Nossos indicadores seguem recomendações da Organização Mundial da Saúde (OMS),
-                incluindo a <strong>Lista de Verificação para Parto Seguro</strong> e as práticas
-                essenciais da atenção ao parto e nascimento.
+                Gestores, profissionais de saúde, profissionais do Núcleo de Segurança do
+                Paciente (NSP) e lideranças com interesse em avaliar a qualidade e segurança da
+                assistência obstétrica em hospitais brasileiros podem utilizar nossa plataforma
+                a partir do <strong>Acesso Gestor</strong>, no qual a inserção dos dados
+                institucionais, operacionais e assistenciais geram automaticamente um relatório
+                de avaliação com os indicadores da qualidade do parto de sua instituição.
               </p>
+              <p>
+                É preciso que o coordenador da instituição ou o responsável pelo monitoramento
+                insira dados básicos do serviço (nome, CNES, estado e cidade), além dos e-mails
+                dos profissionais que irão realizar a coleta.
+              </p>
+              <Button asChild variant="outline" className="mt-2 rounded-full">
+                <Link to="/login">
+                  <Lock className="h-3.5 w-3.5" /> Entrar na Área Hospitalar
+                </Link>
+              </Button>
+            </Section>
+
+            <Section id="como-avaliar" eyebrow="Passo a passo" title="Como avaliar o seu hospital?">
+              <p>
+                Disponibilizamos um documento com o passo a passo completo para condução da
+                avaliação na sua instituição.
+              </p>
+              <a
+                href="/docs/passo-a-passo-qualiparto.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/5 px-4 py-2 text-sm font-medium text-primary transition-colors hover:bg-primary/10"
+              >
+                <Download className="h-4 w-4" />
+                Acesse aqui o documento do passo a passo
+              </a>
+            </Section>
+
+            <Section id="indicadores" eyebrow="Metodologia" title="Indicadores de avaliação da qualidade">
+              <p>Os indicadores da plataforma são baseados em:</p>
               <ul className="mt-2 space-y-2 pl-5 [list-style:disc]">
-                <li>Adesão ao Checklist de Parto Seguro da OMS</li>
-                <li>Implementação das práticas essenciais ao parto e nascimento</li>
-                <li>Frequência e peso de eventos adversos obstétricos</li>
+                <li>Checklist para o Parto Seguro da OMS (Carvalho et al., 2018);</li>
+                <li>Indicadores de eventos adversos (Mann et al., 2006);</li>
+                <li>Diretrizes atuais de práticas essenciais no parto.</li>
               </ul>
+              <p>
+                Os indicadores que compõem a Plataforma QualiParto foram construídos e validados
+                em um estudo piloto anterior (Saturno et al., 2018; Sousa et al., 2020) com base
+                nos itens contidos no Checklist para o Parto Seguro da OMS (<em>Safe Childbirth
+                Checklist – SCC</em>), nos indicadores de eventos adversos padronizados por Mann
+                et al. (2006) e nas atuais diretrizes de boas práticas no parto, além da
+                validação de indicadores usados no projeto e do processo de adaptação do SCC
+                para o Brasil (Carvalho et al., 2018). Os resultados da linha de base da
+                pesquisa foram descritos previamente e podem ser encontrados no estudo de Sousa
+                et al. (2019).
+              </p>
             </Section>
 
-            <Section id="humanizacao" eyebrow="Humanização" title="Escutar quem vive o parto">
+            <Section id="instrumento" eyebrow="Coleta de dados" title="Características do instrumento de coleta de dados">
               <p>
-                A experiência relatada por puérperas é parte central da QualiParto. Construímos
-                um <strong>Índice de Humanização</strong> a partir da percepção sobre respeito,
-                autonomia, acolhimento e informação durante o cuidado recebido.
+                O instrumento é um questionário autoaplicável, organizado em três módulos:
               </p>
+              <div className="grid gap-4 md:grid-cols-3">
+                {[
+                  {
+                    n: "1",
+                    title: "Práticas Essenciais (PE)",
+                    desc: "8 itens de boas práticas recomendadas pela OMS (World Health Organization, 2018).",
+                  },
+                  {
+                    n: "2",
+                    title: "Adesão ao Checklist para Parto Seguro",
+                    desc: "42 itens do checklist adaptado para o Brasil (Carvalho et al., 2018).",
+                  },
+                  {
+                    n: "3",
+                    title: "Eventos Adversos (EA)",
+                    desc: "10 itens padronizados por Mann et al. (2006).",
+                  },
+                ].map((m) => (
+                  <div key={m.n} className="rounded-xl border border-border/60 bg-card p-5">
+                    <span className="inline-flex h-7 w-7 items-center justify-center rounded-full bg-primary/10 text-xs font-bold text-primary">
+                      {m.n}
+                    </span>
+                    <p className="mt-3 text-sm font-semibold text-foreground">{m.title}</p>
+                    <p className="mt-1 text-sm text-muted-foreground">{m.desc}</p>
+                  </div>
+                ))}
+              </div>
               <p>
-                Esses dados ajudam serviços de saúde a identificar oportunidades de melhoria
-                que não aparecem apenas em registros clínicos.
+                O instrumento permite calcular indicadores simples e compostos da qualidade do
+                parto a partir das dimensões <strong>segurança do paciente</strong> (indicadores
+                de EA) e <strong>efetividade clínica</strong> (indicadores de PE). Adicionalmente,
+                o questionário contém perguntas sobre dados demográficos e clínicos da mãe e do
+                recém-nascido.
               </p>
             </Section>
 
