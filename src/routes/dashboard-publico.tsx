@@ -3,6 +3,7 @@ import { Smile, Users, TrendingUp, BarChart3, ArrowRight, Lock, LineChart } from
 import { Button } from "@/components/ui/button";
 import { Logo } from "@/components/logo";
 import { SiteFooter } from "@/components/site-footer";
+import { Breadcrumbs } from "@/components/breadcrumbs";
 
 export const Route = createFileRoute("/dashboard-publico")({
   head: () => ({

@@ -3,6 +3,7 @@ import { Sparkles, MessageSquare, ClipboardList, Heart, ArrowRight, Lock } from 
 import { Button } from "@/components/ui/button";
 import { Logo } from "@/components/logo";
 import { SiteFooter } from "@/components/site-footer";
+import { Breadcrumbs } from "@/components/breadcrumbs";
 
 export const Route = createFileRoute("/meu-parto-ia")({
   head: () => ({

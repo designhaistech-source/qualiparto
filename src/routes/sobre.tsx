@@ -4,6 +4,7 @@ import { Heart, Lock, ArrowRight, Users, Wrench, FileText, BarChart3, ClipboardL
 import { Button } from "@/components/ui/button";
 import { Logo } from "@/components/logo";
 import { SiteFooter } from "@/components/site-footer";
+import { Breadcrumbs } from "@/components/breadcrumbs";
 
 export const Route = createFileRoute("/sobre")({
   head: () => ({

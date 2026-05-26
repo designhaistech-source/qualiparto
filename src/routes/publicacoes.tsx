@@ -4,6 +4,7 @@ import { Heart, Lock, ArrowRight, ChevronDown, FileText, GraduationCap, Megaphon
 import { Button } from "@/components/ui/button";
 import { Logo } from "@/components/logo";
 import { SiteFooter } from "@/components/site-footer";
+import { Breadcrumbs } from "@/components/breadcrumbs";
 
 export const Route = createFileRoute("/publicacoes")({
   head: () => ({
