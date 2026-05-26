@@ -103,7 +103,7 @@ function TableOfContents() {
   const { active, progress } = useScrollspy();
 
   return (
-    <aside className="sticky top-24 hidden lg:block">
+    <aside className="sticky top-24 hidden self-start lg:block">
       <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-muted-foreground">
         Nesta página
       </p>
