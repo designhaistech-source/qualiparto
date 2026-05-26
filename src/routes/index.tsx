@@ -28,8 +28,8 @@ export const Route = createFileRoute("/")({
 
 
 const navItems = [
-  { label: "Início", href: "#inicio" },
-  { label: "Dashboard Público", href: "#ferramentas" },
+  { label: "Início", href: "/" },
+  { label: "Dashboard Público", href: "/dashboard-publico" },
   { label: "Meu Parto IA", href: "#ferramentas" },
   { label: "A plataforma", href: "/sobre" },
   { label: "Publicações", href: "#publicacoes" },
@@ -91,15 +91,16 @@ function Hero() {
             pesquisadores e cidadãos acompanharem a qualidade da assistência ao parto no país.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
-            <Button size="lg" className="rounded-full bg-primary px-7 shadow-[var(--shadow-soft)] hover:bg-primary-glow">
-              Explorar Dashboard <ArrowRight className="ml-1 h-4 w-4" />
+            <Button asChild size="lg" className="rounded-full bg-primary px-7 shadow-[var(--shadow-soft)] hover:bg-primary-glow">
+              <Link to="/dashboard-publico">Explorar Dashboard <ArrowRight className="ml-1 h-4 w-4" /></Link>
             </Button>
             <Button
+              asChild
               size="lg"
               variant="outline"
               className="rounded-full border-secondary bg-secondary/30 px-7 text-secondary-foreground hover:bg-secondary/50"
             >
-              Conhecer a Plataforma
+              <Link to="/sobre">Conhecer a Plataforma</Link>
             </Button>
           </div>
         </div>
