@@ -215,7 +215,7 @@ function SobrePage() {
 
       <div className="relative overflow-hidden border-b border-border/60 bg-[var(--gradient-hero)]">
         <div className="absolute -right-32 -top-32 -z-10 h-96 w-96 rounded-full bg-secondary/30 blur-3xl" />
-        <div className="mx-auto max-w-4xl px-6 py-16 text-center md:py-24">
+        <div className="mx-auto max-w-4xl px-6 py-10 text-center md:py-14">
           <span className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-3 py-1 text-xs font-medium text-primary">
             <Heart className="h-3.5 w-3.5" /> Sobre a QualiParto
           </span>
