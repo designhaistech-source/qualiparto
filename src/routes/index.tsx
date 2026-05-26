@@ -300,37 +300,32 @@ function Publications() {
   );
 }
 
-const partners = ["UFRN", "IMD", "CNPq", "QualiSaúde"];
+const partners = [
+  { name: "QualiSaúde / UFRN", src: partnerQualisaudeUfrn },
+  { name: "Metrópole Digital", src: partnerMetropole },
+  { name: "CNPq", src: partnerCnpq },
+];
 
 function Footer() {
   return (
-    <footer className="border-t border-border/60 bg-card">
-      <div className="mx-auto max-w-7xl px-6 py-14">
-        <p className="text-center text-xs font-semibold uppercase tracking-[0.2em] text-muted-foreground">
-          Instituições Parceiras
-        </p>
-        <div className="mt-6 flex flex-wrap items-center justify-center gap-10">
+    <footer className="border-t border-border/60 bg-background">
+      <div className="mx-auto max-w-7xl px-6 py-10">
+        <div className="flex flex-wrap items-center justify-center gap-x-12 gap-y-6 opacity-80">
           {partners.map((p) => (
-            <div
-              key={p}
-              className="flex items-center gap-2 text-sm font-medium text-muted-foreground"
-            >
-              <span className="grid h-10 w-10 place-items-center rounded-full border border-border bg-background text-xs font-bold text-primary">
-                {p[0]}
-              </span>
-              {p}
-            </div>
+            <img
+              key={p.name}
+              src={p.src}
+              alt={p.name}
+              className="h-8 w-auto object-contain md:h-9"
+            />
           ))}
         </div>
-        <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-border/60 pt-8 text-sm text-muted-foreground md:flex-row">
-          <div>
-            <Logo />
-            <p className="mt-2 text-xs">© 2026 QualiParto. Parceria UFRN, IMD, CNPq e QualiSaúde.</p>
-          </div>
-          <nav className="flex flex-wrap gap-6 text-xs">
-            <a href="#sobre" className="hover:text-primary">Sobre</a>
+        <div className="mt-8 flex flex-col items-center justify-between gap-3 border-t border-border/60 pt-6 text-xs text-muted-foreground md:flex-row">
+          <p>© 2026 QualiParto</p>
+          <nav className="flex flex-wrap gap-5">
+            <Link to="/sobre" className="hover:text-primary">A plataforma</Link>
             <a href="#publicacoes" className="hover:text-primary">Publicações</a>
-            <a href="#" className="hover:text-primary">Política de Privacidade</a>
+            <a href="#" className="hover:text-primary">Privacidade</a>
             <a href="#" className="hover:text-primary">Contato</a>
           </nav>
         </div>
