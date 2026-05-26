@@ -29,7 +29,7 @@ const navItems = [
   { label: "Início", href: "/" },
   { label: "Dashboard Público", href: "/dashboard-publico" },
   { label: "Meu Parto IA", href: "/meu-parto-ia" },
-  { label: "A plataforma", href: "/sobre" },
+  { label: "A plataforma", href: "/aplataforma" },
   { label: "Publicações", href: "/publicacoes" },
 ];
 
@@ -98,7 +98,7 @@ function Hero() {
               variant="outline"
               className="rounded-full border-secondary bg-secondary/30 px-7 text-secondary-foreground hover:bg-secondary/50"
             >
-              <Link to="/sobre">Conhecer a Plataforma</Link>
+              <Link to="/aplataforma">Conhecer a Plataforma</Link>
             </Button>
           </div>
         </div>
