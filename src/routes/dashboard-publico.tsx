@@ -148,7 +148,7 @@ function DashboardPublicoPage() {
             Quer acessar dados detalhados do seu hospital?
           </h3>
           <p className="mt-4 max-w-xl text-sm leading-relaxed text-primary-foreground/90">
-            Representantes hospitalares podem acessar o painel interno com indicadores
+            Representantes hospitalares podem acessar a Área Hospitalar com indicadores
             detalhados e ferramentas de monitoramento.
           </p>
           <Button
