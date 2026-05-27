@@ -172,8 +172,23 @@ function Navbar() {
   );
 }
 
-function YearAccordion({ groups }: { groups: YearGroup[] }) {
+function YearAccordion({ groups, query }: { groups: YearGroup[]; query: string }) {
   const [openYear, setOpenYear] = useState<number | null>(groups[0]?.year ?? null);
+
+  const normalizedQuery = query.trim().toLowerCase();
+  const filtered = normalizedQuery
+    ? groups
+        .map((g) => ({
+          ...g,
+          items: g.items.filter(
+            (item) =>
+              item.title.toLowerCase().includes(normalizedQuery) ||
+              item.authors.toLowerCase().includes(normalizedQuery) ||
+              item.venue.toLowerCase().includes(normalizedQuery)
+          ),
+        }))
+        .filter((g) => g.items.length > 0)
+    : groups;
 
   return (
     <div className="rounded-2xl border border-border/60 bg-card shadow-sm">
