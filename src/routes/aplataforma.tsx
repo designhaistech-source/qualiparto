@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useEffect, useRef, useState } from "react";
-import { Heart, Lock, ArrowRight, Users, Wrench, FileText, BarChart3, ClipboardList, Sparkles, MessageSquare, Download } from "lucide-react";
+import { Heart, Lock, ArrowRight, ArrowUp, Users, Wrench, FileText, BarChart3, ClipboardList, Sparkles, MessageSquare, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Logo } from "@/components/logo";
 import { SiteFooter } from "@/components/site-footer";
