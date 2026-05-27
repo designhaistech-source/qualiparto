@@ -156,7 +156,7 @@ function DashboardPublicoPage() {
             className="mt-8 rounded-full bg-background px-6 text-foreground hover:bg-background/90"
           >
             <Link to="/login">
-              Acessar Painel <ArrowRight className="ml-1 h-4 w-4" />
+              Acessar Área Hospitalar <ArrowRight className="ml-1 h-4 w-4" />
             </Link>
           </Button>
         </div>
