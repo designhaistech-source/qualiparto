@@ -131,7 +131,7 @@ const tools = [
   },
   {
     icon: Building2,
-    title: "Painel para Hospitais",
+    title: "Área Hospitalar",
     desc: "Sistema interno de coleta de dados e monitoramento dos indicadores de assistência ao parto.",
     note: "Acesso exclusivo para instituições participantes",
     cta: "Acessar área restrita",
@@ -228,7 +228,7 @@ function About() {
             de dados e acompanharem os indicadores internos do seu hospital.
           </p>
           <Button size="lg" className="mt-7 rounded-full bg-background px-7 text-foreground hover:bg-background/90">
-            Entrar no Painel
+            Entrar na Área Hospitalar
           </Button>
         </div>
       </div>

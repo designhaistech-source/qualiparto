@@ -148,7 +148,7 @@ function DashboardPublicoPage() {
             Quer acessar dados detalhados do seu hospital?
           </h3>
           <p className="mt-4 max-w-xl text-sm leading-relaxed text-primary-foreground/90">
-            Representantes hospitalares podem acessar o painel interno com indicadores
+            Representantes hospitalares podem acessar a Área Hospitalar com indicadores
             detalhados e ferramentas de monitoramento.
           </p>
           <Button
@@ -156,7 +156,7 @@ function DashboardPublicoPage() {
             className="mt-8 rounded-full bg-background px-6 text-foreground hover:bg-background/90"
           >
             <Link to="/login">
-              Acessar Painel <ArrowRight className="ml-1 h-4 w-4" />
+              Acessar Área Hospitalar <ArrowRight className="ml-1 h-4 w-4" />
             </Link>
           </Button>
         </div>
