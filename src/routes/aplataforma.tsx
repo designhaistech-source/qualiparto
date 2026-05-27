@@ -403,6 +403,18 @@ function SobrePage() {
         </div>
       </main>
 
+      <div className="border-t border-border/60 bg-muted/30 py-10">
+        <div className="mx-auto flex max-w-7xl items-center justify-center px-6">
+          <button
+            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+            className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/5 px-5 py-2.5 text-sm font-medium text-primary transition-colors hover:bg-primary/10"
+          >
+            <ArrowUp className="h-4 w-4" />
+            Voltar para o início
+          </button>
+        </div>
+      </div>
+
       <SiteFooter />
     </div>
   );
