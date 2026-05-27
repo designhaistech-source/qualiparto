@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useEffect, useRef, useState } from "react";
-import { Heart, Lock, ArrowRight, Users, Wrench, FileText, BarChart3, ClipboardList, Sparkles, MessageSquare, Download } from "lucide-react";
+import { Heart, Lock, ArrowRight, ArrowUp, Users, Wrench, FileText, BarChart3, ClipboardList, Sparkles, MessageSquare, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Logo } from "@/components/logo";
 import { SiteFooter } from "@/components/site-footer";
@@ -402,6 +402,18 @@ function SobrePage() {
           <TableOfContents />
         </div>
       </main>
+
+      <div className="border-t border-border/60 bg-muted/30 py-10">
+        <div className="mx-auto flex max-w-7xl items-center justify-center px-6">
+          <button
+            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+            className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/5 px-5 py-2.5 text-sm font-medium text-primary transition-colors hover:bg-primary/10"
+          >
+            <ArrowUp className="h-4 w-4" />
+            Voltar para o início
+          </button>
+        </div>
+      </div>
 
       <SiteFooter />
     </div>
