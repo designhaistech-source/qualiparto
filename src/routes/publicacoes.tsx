@@ -255,7 +255,7 @@ function YearAccordion({ groups, query }: { groups: YearGroup[]; query: string }
 }
 
 function PublicacoesPage() {
-  const [activeTab, setActiveTab] = useState<(typeof tabs)[number]["id"]>>("artigos");
+  const [activeTab, setActiveTab] = useState<(typeof tabs)[number]["id"]>("artigos");
   const [query, setQuery] = useState("");
   const current = tabs.find((t) => t.id === activeTab)!;
 
