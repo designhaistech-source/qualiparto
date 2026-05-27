@@ -22,8 +22,9 @@ export function Breadcrumbs({ items }: { items: Crumb[] }) {
                   aria-current={isLast ? "page" : undefined}
                 >
                   {i === 0 ? (
-                    <span className="inline-flex items-center gap-1">
-                      <Home className="h-3.5 w-3.5" /> {item.label}
+                    <span className="inline-flex items-center gap-1 leading-none">
+                      <Home className="h-3.5 w-3.5 shrink-0 translate-y-[0.5px]" aria-hidden />
+                      <span>{item.label}</span>
                     </span>
                   ) : (
                     item.label
@@ -32,10 +33,10 @@ export function Breadcrumbs({ items }: { items: Crumb[] }) {
               ) : (
                 <Link
                   to={item.to}
-                  className="inline-flex items-center gap-1 transition-colors hover:text-primary"
+                  className="inline-flex items-center gap-1 leading-none transition-colors hover:text-primary"
                 >
-                  {i === 0 && <Home className="h-3.5 w-3.5" />}
-                  {item.label}
+                  {i === 0 && <Home className="h-3.5 w-3.5 shrink-0 translate-y-[0.5px]" aria-hidden />}
+                  <span>{item.label}</span>
                 </Link>
               )}
             </li>
