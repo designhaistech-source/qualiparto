@@ -296,7 +296,7 @@ function PublicacoesPage() {
         </div>
 
         <div className="mt-10">
-          <YearAccordion groups={current.data} />
+          <YearAccordion groups={current.data} query={query} />
         </div>
 
         <section className="mt-16 rounded-2xl border border-border/60 bg-card p-8 shadow-sm md:p-10">
