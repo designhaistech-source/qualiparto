@@ -192,64 +192,71 @@ function YearAccordion({ groups, query }: { groups: YearGroup[]; query: string }
 
   return (
     <div className="rounded-2xl border border-border/60 bg-card shadow-sm">
-      {groups.map((g, idx) => {
-        const isOpen = openYear === g.year;
-        return (
-          <div
-            key={g.year}
-            className={idx > 0 ? "border-t border-border/60" : ""}
-          >
-            <button
-              type="button"
-              onClick={() => setOpenYear(isOpen ? null : g.year)}
-              className="flex w-full items-center justify-between gap-4 px-6 py-5 text-left transition-colors hover:bg-muted/40"
+      {filtered.length === 0 ? (
+        <div className="px-6 py-10 text-center text-sm text-muted-foreground">
+          Nenhuma publicação encontrada para &ldquo;{query.trim()}&rdquo;.
+        </div>
+      ) : (
+        filtered.map((g, idx) => {
+          const isOpen = openYear === g.year;
+          return (
+            <div
+              key={g.year}
+              className={idx > 0 ? "border-t border-border/60" : ""}
             >
-              <div className="flex items-center gap-3">
-                <span className="text-lg font-semibold text-foreground">{g.year}</span>
-                <span className="inline-flex h-6 min-w-6 items-center justify-center rounded-full bg-secondary/60 px-2 text-xs font-medium text-secondary-foreground">
-                  {g.items.length}
-                </span>
-              </div>
-              <ChevronDown
-                className={`h-4 w-4 text-muted-foreground transition-transform ${isOpen ? "rotate-180" : ""}`}
-              />
-            </button>
-            {isOpen && (
-              <ul className="space-y-5 px-6 pb-6">
-                {g.items.map((item) => (
-                  <li
-                    key={item.title}
-                    className="border-l-2 border-primary/60 pl-4"
-                  >
-                    <p className="text-sm font-semibold text-foreground">
-                      {item.url ? (
-                        <a
-                          href={item.url}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="hover:text-primary"
-                        >
-                          {item.title}
-                        </a>
-                      ) : (
-                        item.title
-                      )}
-                    </p>
-                    <p className="mt-1 text-sm text-muted-foreground">{item.authors}</p>
-                    <p className="mt-0.5 text-xs italic text-muted-foreground">{item.venue}</p>
-                  </li>
-                ))}
-              </ul>
-            )}
-          </div>
-        );
-      })}
+              <button
+                type="button"
+                onClick={() => setOpenYear(isOpen ? null : g.year)}
+                className="flex w-full items-center justify-between gap-4 px-6 py-5 text-left transition-colors hover:bg-muted/40"
+              >
+                <div className="flex items-center gap-3">
+                  <span className="text-lg font-semibold text-foreground">{g.year}</span>
+                  <span className="inline-flex h-6 min-w-6 items-center justify-center rounded-full bg-secondary/60 px-2 text-xs font-medium text-secondary-foreground">
+                    {g.items.length}
+                  </span>
+                </div>
+                <ChevronDown
+                  className={`h-4 w-4 text-muted-foreground transition-transform ${isOpen ? "rotate-180" : ""}`}
+                />
+              </button>
+              {isOpen && (
+                <ul className="space-y-5 px-6 pb-6">
+                  {g.items.map((item) => (
+                    <li
+                      key={item.title}
+                      className="border-l-2 border-primary/60 pl-4"
+                    >
+                      <p className="text-sm font-semibold text-foreground">
+                        {item.url ? (
+                          <a
+                            href={item.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="hover:text-primary"
+                          >
+                            {item.title}
+                          </a>
+                        ) : (
+                          item.title
+                        )}
+                      </p>
+                      <p className="mt-1 text-sm text-muted-foreground">{item.authors}</p>
+                      <p className="mt-0.5 text-xs italic text-muted-foreground">{item.venue}</p>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </div>
+          );
+        })
+      )}
     </div>
   );
 }
 
 function PublicacoesPage() {
-  const [activeTab, setActiveTab] = useState<(typeof tabs)[number]["id"]>("artigos");
+  const [activeTab, setActiveTab] = useState<(typeof tabs)[number]["id"]>"artigos");
+  const [query, setQuery] = useState("");
   const current = tabs.find((t) => t.id === activeTab)!;
 
   return (
@@ -274,7 +281,20 @@ function PublicacoesPage() {
       </div>
 
       <main className="mx-auto max-w-5xl px-6 py-12 md:py-16">
-        <div className="flex flex-wrap items-center justify-center gap-2 md:gap-3">
+        <div className="mx-auto max-w-xl">
+          <div className="relative">
+            <Search className="absolute left-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
+            <input
+              type="text"
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
+              placeholder="Buscar por título, autor ou veículo..."
+              className="w-full rounded-full border border-border/80 bg-card py-2.5 pl-10 pr-4 text-sm text-foreground shadow-sm outline-none transition-colors placeholder:text-muted-foreground focus:border-primary/40 focus:ring-2 focus:ring-primary/10"
+            />
+          </div>
+        </div>
+
+        <div className="mt-8 flex flex-wrap items-center justify-center gap-2 md:gap-3">
           {tabs.map(({ id, label, icon: Icon }) => {
             const isActive = activeTab === id;
             return (
